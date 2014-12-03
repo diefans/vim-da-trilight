@@ -1,63 +1,63 @@
 " vim: ft=vim:fdm=marker
 
-" Enable pymode syntax for python files
-call pymode#default('g:pymode', 1)
-call pymode#default('g:pymode_syntax', g:pymode)
+"" Enable pymode syntax for python files
+"call pymode#default('g:pymode', 1)
+"call pymode#default('g:pymode_syntax', g:pymode)
 
-" DESC: Disable script loading
-if !g:pymode || !g:pymode_syntax || pymode#default('b:current_syntax', 'pymode')
-    finish
-endif
+"" DESC: Disable script loading
+"if !g:pymode || !g:pymode_syntax || pymode#default('b:current_syntax', 'pymode')
+"    finish
+"endif
 
-" OPTIONS: {{{
+"" OPTIONS: {{{
 
-" Highlight all by default
-call pymode#default('g:pymode_syntax_all', 1)
+"" Highlight all by default
+"call pymode#default('g:pymode_syntax_all', 1)
 
-" Highlight 'print' as function
-call pymode#default("g:pymode_syntax_print_as_function", 0)
+"" Highlight 'print' as function
+"call pymode#default("g:pymode_syntax_print_as_function", 0)
 
-" Highlight '=' operator
-call pymode#default('g:pymode_syntax_highlight_equal_operator', g:pymode_syntax_all)
+"" Highlight '=' operator
+"call pymode#default('g:pymode_syntax_highlight_equal_operator', g:pymode_syntax_all)
 
-" Highlight '*' operator
-call pymode#default('g:pymode_syntax_highlight_stars_operator', g:pymode_syntax_all)
+"" Highlight '*' operator
+"call pymode#default('g:pymode_syntax_highlight_stars_operator', g:pymode_syntax_all)
 
-" Highlight 'self' keyword
-call pymode#default('g:pymode_syntax_highlight_self', g:pymode_syntax_all)
+"" Highlight 'self' keyword
+"call pymode#default('g:pymode_syntax_highlight_self', g:pymode_syntax_all)
 
-" Highlight indent's errors
-call pymode#default('g:pymode_syntax_indent_errors', g:pymode_syntax_all)
+"" Highlight indent's errors
+"call pymode#default('g:pymode_syntax_indent_errors', g:pymode_syntax_all)
 
-" Highlight space's errors
-call pymode#default('g:pymode_syntax_space_errors', g:pymode_syntax_all)
+"" Highlight space's errors
+"call pymode#default('g:pymode_syntax_space_errors', g:pymode_syntax_all)
 
-" Highlight string formatting
-call pymode#default('g:pymode_syntax_string_formatting', g:pymode_syntax_all)
-call pymode#default('g:pymode_syntax_string_format', g:pymode_syntax_all)
-call pymode#default('g:pymode_syntax_string_templates', g:pymode_syntax_all)
-call pymode#default('g:pymode_syntax_doctests', g:pymode_syntax_all)
+"" Highlight string formatting
+"call pymode#default('g:pymode_syntax_string_formatting', g:pymode_syntax_all)
+"call pymode#default('g:pymode_syntax_string_format', g:pymode_syntax_all)
+"call pymode#default('g:pymode_syntax_string_templates', g:pymode_syntax_all)
+"call pymode#default('g:pymode_syntax_doctests', g:pymode_syntax_all)
 
-" Support docstrings in syntax highlighting
-call pymode#default('g:pymode_syntax_docstrings', 1)
+"" Support docstrings in syntax highlighting
+"call pymode#default('g:pymode_syntax_docstrings', 1)
 
-" Highlight builtin objects (True, False, ...)
-call pymode#default('g:pymode_syntax_builtin_objs', g:pymode_syntax_all)
+"" Highlight builtin objects (True, False, ...)
+"call pymode#default('g:pymode_syntax_builtin_objs', g:pymode_syntax_all)
 
-" Highlight builtin types (str, list, ...)
-call pymode#default('g:pymode_syntax_builtin_types', g:pymode_syntax_all)
+"" Highlight builtin types (str, list, ...)
+"call pymode#default('g:pymode_syntax_builtin_types', g:pymode_syntax_all)
 
-" Highlight builtin types (div, eval, ...)
-call pymode#default('g:pymode_syntax_builtin_funcs', g:pymode_syntax_all)
+"" Highlight builtin types (div, eval, ...)
+"call pymode#default('g:pymode_syntax_builtin_funcs', g:pymode_syntax_all)
 
-" Highlight exceptions (TypeError, ValueError, ...)
-call pymode#default('g:pymode_syntax_highlight_exceptions', g:pymode_syntax_all)
+"" Highlight exceptions (TypeError, ValueError, ...)
+"call pymode#default('g:pymode_syntax_highlight_exceptions', g:pymode_syntax_all)
 
-" More slow synchronizing. Disable on the slow machine, but code in docstrings
-" could be broken.
-call pymode#default('g:pymode_syntax_slow_sync', 1)
+"" More slow synchronizing. Disable on the slow machine, but code in docstrings
+"" could be broken.
+"call pymode#default('g:pymode_syntax_slow_sync', 1)
 
-" }}}
+"" }}}
 
 
 " For version 5.x: Clear all syntax items
