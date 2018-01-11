@@ -311,9 +311,6 @@ call <SID>X("DiffAdd",          s:white,                 s:contrast_bg_green,   
 call <SID>X("DiffChange",          s:white,                 s:contrast_bg_yellow,                 "none")
 call <SID>X("DiffDelete",          s:white,                 s:contrast_bg_red,                 "none")
 call <SID>X("DiffText",          s:white,                 s:contrast_bg_blue,                 "none")
-"call <SID>X("DiffChange",          "",                 "",                 "")
-"call <SID>X("DiffDelete",          "",                 "",                 "")
-"call <SID>X("DiffText",          "",                 "",                 "")
 
 call <SID>X("NonText",          s:light_grey,       s:grey,             "none")
 call <SID>X("SignColumn",       s:grey_blue,        s:dark_grey_blue,   "none")
