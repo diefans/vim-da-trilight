@@ -1,5 +1,3 @@
-set background=dark
-
 hi clear
 
 if exists("syntax_on")
@@ -238,6 +236,10 @@ let s:red               = 'd08356'
 let s:cyan              = '74dad9'
 let s:darkgrey          = '1a1a1a'
 let s:contrast_bg       = '120707'
+let s:contrast_bg_blue  = '120727'
+let s:contrast_bg_green = '122707'
+let s:contrast_bg_red   = '320707'
+let s:contrast_bg_yellow = '322707'
 let s:grey              = '303030'
 let s:light_grey        = '605958'
 let s:white             = 'fffedc'
@@ -268,7 +270,12 @@ endif
 " IDE colors
 call <SID>X("Normal",           s:white,            s:contrast_bg,      "none")
 call <SID>X("Cursor",           "",                 s:cursor,           "underline")
-call <SID>X("CursorLine",       "",                 s:cursor_column,    "none")
+if &diff
+  " Don't change the background color in diff mode
+    call <SID>X("CursorLine",   "",             "none",                 "underline")
+else
+    call <SID>X("CursorLine",   "",             s:cursor_column,    "none")
+endif
 call <SID>X("CursorColumn",     "",                 s:cursor_column,    "none")
 call <SID>X("ColorColumn",      "",                 s:color_column,     "none")
 call <SID>X("MarginBorder",     "",                 s:color_column,     "none")
@@ -300,10 +307,13 @@ call <SID>X("PmenuSel",         "a09998",           "404040",           "underli
 			"ModeMsg
 			"MoreMsg
 call <SID>X("Directory",        "dad085",           "",                 "none")
-			"DiffAdd
-			"DiffChange
-			"DiffDelete
-			"DiffText
+call <SID>X("DiffAdd",          s:white,                 s:contrast_bg_green,                 "none")
+call <SID>X("DiffChange",          s:white,                 s:contrast_bg_yellow,                 "none")
+call <SID>X("DiffDelete",          s:white,                 s:contrast_bg_red,                 "none")
+call <SID>X("DiffText",          s:white,                 s:contrast_bg_blue,                 "none")
+"call <SID>X("DiffChange",          "",                 "",                 "")
+"call <SID>X("DiffDelete",          "",                 "",                 "")
+"call <SID>X("DiffText",          "",                 "",                 "")
 
 call <SID>X("NonText",          s:light_grey,       s:grey,             "none")
 call <SID>X("SignColumn",       s:grey_blue,        s:dark_grey_blue,   "none")
@@ -381,4 +391,6 @@ delf <SID>grey_number
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " margin
 " autocmd BufWinEnter * call matchadd('MarginBorder', '\%>'.&l:textwidth.'v.\+', -1)
-"  
+"
+
+set background=dark
